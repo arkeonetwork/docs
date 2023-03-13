@@ -1,15 +1,15 @@
 # Data Providers
 
 ## Introduction
-Data providers are the core of the arkeo network.  They provide access to api services that can be consumed by users, dapps, or any other system that requires decentralized access to arbitrary data. By registering themselves on chain, and providing a bond, they become discoverable on-chain for a client to consume their data. 
+Data providers are a critical element in the arkeo network.  They provide access to api services that can be consumed by users, dapps, or any other system that requires decentralized access to arbitrary data. By registering themselves on chain, and providing a bond, they become discoverable for a client to being consuminbg their data service. 
 
 ## Bonding
-The first step for a provider to register their services with the Arkeo Network is for them to call `BondProvider`. In this call the provider will specify their public key, the service they are registering (e.g. `btc-mainnet-fullnode`) and a bond amount in ARKEO tokens. In order for clients to open a valid contract with a specific provider, the provider must post the minimum bond amount that is a configuration parameter of the arkeo network.
+The first step is for a provider to register a service with the Arkeo Network by calling `BondProvider`. In this call the provider will specify their public key, the name of the service they are registering (e.g. `btc-mainnet-fullnode`) and a bond amount in ARKEO tokens. In order for clients to open a valid contract with a specific provider, the provider must post the minimum bond amount specified by the arkeo network.
 
-Providers are free to unbound at any time by calling `BondProvider` with a negative amount of ARKEO tokens representing the amount they wish to unbound.  If this drops their bound below the configured global minumum, clients will no longer be able to open new contracts with them. However, any existing contracts will remain valid until they expire or a user cancels. 
+Providers are free to unbond at any time by calling `BondProvider` with a negative amount of ARKEO tokens representing the amount they wish to unbond.  If this drops their bond below the configured global minumum, clients will no longer be able to open new contracts with them. However, any existing contracts will remain valid until they expire or a user cancels. 
 
 ## Additional Provider Information
-Providers are able to call `ModProvider` in order to establish or modify additional metadata about their services, state, and rates. The below fields are currently included as part of this call
+Providers call `ModProvider` in order to establish or modify additional metadata about their services, state, and rates. The below fields are currently included as part of this call
 
 ```go
 Service             string                                    
