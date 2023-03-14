@@ -25,7 +25,7 @@ SettlementDuration  int64
 
 This information is stored on-chain and can be queried by clients in order to determine the best provider for their needs. Additionally the [directory service](../directory/directory.md) will be able to query this information in order to provide a more complete view of the providers available on the network.
 
-## Provider payments
+## Provider Payments
 Payments for the consumption of services the providers offer are handled on-chain.  Depending on the [contract type](contracts.md) the client will either pay a subscription rate or a pay-as-you-go rate denominated in ARKEO tokens. For more information on the contract lifecycle, see [contracts](contracts.md).
 
 ## Sentinel
