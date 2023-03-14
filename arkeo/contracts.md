@@ -4,7 +4,7 @@
 Contracts represent an on-chain agreement between a client and a provider on the terms by which the client can consume api services offered by the provider.
 
 ## Creating a contract
-A client can open a contract for their own use or delegate the ability to spend the contract to another user. Once a client has identified a provider that they wish to utilize, they call `OpenContract` specifying the parameters of the contract they would like to open. 
+A client, such as a dApp, can open a contract for their own use or delegate the ability to spend the contract to another user. Once a client has identified a provider that they wish to utilize, they call `OpenContract` specifying the parameters of the contract they would like to open. 
 
 ```go
 Provider           github_com_arkeonetwork_arkeo_common.PubKey 
@@ -28,7 +28,7 @@ tokens equal to the subscription rate multiplied by the duration of the contract
 ### Pay-as-you-go contracts
 Clients who would like to open a pay-as-you-go contract will specify a Deposit amount that is debited from their usage. The client will be charged the pay-as-you-go rate for each api request they make.  API requests are made off chain, but require the client to sign a message which includes a nonce to authenticate their request.  These signed messages can be submitted on-chain as a proof of usage at any time and will accordingly debit the Deposit amount of the Client and credit the provider. Pay-as-you-go contracts also entail an optional settlement period after the contract expires in which the final claims against a deposit can be made before unused funds are returned to the client. The duration of this settlement period is specified by the provider and agreed to in the `OpenContract` call by the client. 
 
-## Deletagating the use of a contract
+## Delegating the use of a contract
 Clients can delegate the ability to spend the contract to another user. This is useful for clients who wish to allow a third party to make api requests on their behalf. The client can delegate the contract to another user by specifying the public key of the user they wish to delegate to in the `Delegate` field of the `OpenContract` call.  We refer to the delegate if it exists or the client as the `Spender` of the contract.
 
 ## Claiming income from a contract

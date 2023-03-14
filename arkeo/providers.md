@@ -1,7 +1,7 @@
 # Data Providers
 
 ## Introduction
-Data providers are a critical element in the Arkeo network.  They provide access to api services that can be consumed by users, dapps, or any other system that requires decentralized access to arbitrary data. By registering themselves on chain, and providing a bond, they become discoverable for a client to being consuming their data service. 
+Data providers are a critical element in the Arkeo network.  They provide access to api services that can be consumed by users, dApps, or any other system that requires decentralized access to arbitrary data. Typically, this is a blockchain node operator that makes data commercially available to dApps, such as an Ethereum node. By registering themselves on chain, and providing a bond, they become discoverable for a client to being consuming their data service. 
 
 ## Bonding
 The first step is for a provider to register a service with the Arkeo Network by calling `BondProvider`. In this call the provider will specify their public key, the name of the service they are registering (e.g. `btc-mainnet-fullnode`) and a bond amount in ARKEO tokens. In order for clients to open a valid contract with a specific provider, the provider must post the minimum bond amount specified by the Arkeo network.
