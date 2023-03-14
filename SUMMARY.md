@@ -1,7 +1,6 @@
 # Table of contents
 
-[Introduction](README.md)
-
+* [Introduction](README.md)
 * Arkeo Network
   * [Data Providers](arkeo/providers.md)  
   * [Contracts and Lifecycle](arkeo/contracts.md)
