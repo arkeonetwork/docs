@@ -1,19 +1,19 @@
 # Arkeo Airdrop
 
 ## Introduction
-The initial airdrop of arkeo will be spread amount a number of different groups from a broad variety of communites in order to foster participation in the Arkeo network. 
+The initial airdrop of ARKEO will be spread amount a number of different groups from a broad variety of communities in order to foster participation in the Arkeo network. 
 
 ## Airdrop Distribution
 Coming soon...
 
 ## Claiming your airdrop
-Users are required to take multiple actions in order to recieve the full amount of their airdrop.
+Users are required to take multiple actions in order to receive the full amount of their airdrop.
 
 - 1/3 is sent to users when they claim their airdop
-- 1/3 is send to users after they delegate arkeo tokens to a validator
+- 1/3 is send to users after they delegate Arkeo tokens to a validator
 - 1/3 is sent to users after they have voted in governance
 
-Ethereum users will be able to claim on arkeo using a signed message that transfers their airdrop from the designated Ethereum address to their Arkeo address.
+Ethereum users will be able to claim on Arkeo using a signed message that transfers their airdrop from the designated Ethereum address to their Arkeo address.
 
 Addresses eligible for native claims on Arkeo, will have a small amount of Arkeo in their accounts on genesis. This will be enough to pay for the gas fees of claiming their initial airdrop.
 
