@@ -22,5 +22,5 @@ After three months, the claimable amount linearly decays until 6 months after la
 
 After 6 months from launch, all unclaimed airdrop tokens are sent back to the reserve.
 
-## Thorchain users 
-Due to the fact that thorchain has a unique bip44 coin type (931) compared with many other cosmos zones and Arkeo (118), we have added a mechanism to allow thorchain users to transfer their airdrop from the initially allocated address derived using the thorchain coin type to their preferred Arkeo address. This is only able to be done once per claim. 
+## THORChain users
+Due to the fact that THORChain has a unique BIP-44 coin type (931) different from Arkeo many other Cosmos zones (118), we have added a mechanism to allow THORChain users to transfer their airdrop from the initially allocated address derived using the THORChain coin type to their preferred Arkeo address. This action may only be performed once per claim.
