@@ -5,13 +5,13 @@
   * [Arkeo Token](architecture/token.md)
   * [Data Providers](architecture/providers.md)  
   * [Contracts and Lifecycle](architecture/contracts.md)
-* Directory Service
   * [Directory Service](directory/directory.md)
-* Data Providers
-  * [Management](data-providers/management.md)
-  * [Sentinel](data-providers/sentinel.md)
-* Contracts
-  * [Management](contracts/management.md)
+* How to use
+    * Data Providers
+        * [Management](data-providers/management.md)
+        * [Sentinel](data-providers/sentinel.md)
+    * Contracts
+        * [Management](contracts/management.md)
 * Airdrop
   * [Airdrop](airdrop.md)
 * Official URLs
