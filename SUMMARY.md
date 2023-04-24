@@ -1,10 +1,10 @@
 # Table of contents
 
 * [Introduction](README.md)
-* Arkeo Network
-  * [Data Providers](arkeo/providers.md)  
-  * [Contracts and Lifecycle](arkeo/contracts.md)
-  * [Arkeo Token](arkeo/token.md)
+* Architecture
+  * [Arkeo Token](architecture/token.md)
+  * [Data Providers](architecture/providers.md)  
+  * [Contracts and Lifecycle](architecture/contracts.md)
 * Directory Service
   * [Directory Service](directory/directory.md)
 * Data Providers
