@@ -73,3 +73,6 @@ $ NONCE=<num> # the nonce represents the number of queries made between the clie
 $ SIGNATURE="<signature>" 
 $ arkeod tx arkeo claim-contract-income -y --from <user> --keyring-backend file --node "tcp://seed.arkeo.network:26657" -- "$ID" "$NONCE" "$SIGNATURE"
 ```
+
+**NOTE** If you are claiming income for an open subscription contract, no signature is
+required.
