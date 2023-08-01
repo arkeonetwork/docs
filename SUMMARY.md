@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Public Testnet](testnet.md)
 * Architecture
   * [Arkeo Token](architecture/token.md)
   * [Data Providers](architecture/providers.md)  
