@@ -52,6 +52,25 @@ repository](https://github.com/arkeonetwork/arkeo#arkeo-binary). Once you've
 got your "tarkeo" address, request tokens through this [Google
 form](https://forms.gle/aM6sc73qtxenRxf37).
 
+## 💻 Testnet Address
+To access a testnet server, they can be reached at
+```
+seed.arkeo.network
+```
+
+The arkeo api is available on port `1317`
+
+example
+``
+curl seed.arkeo.network:1317/arkeo/providers | jq
+```
+
+For the RPC port, try port `26657`
+example
+```
+curl -s seed.arkeo.network:26657/status | jq
+```
+
 ## 🎉 Let's Make Magic Happen!  By participating in the Arkeo Network Phase 3
 Testnet, you're not just testing a protocol—you're part of a passionate
 community that is shaping the future of blockchain technology. Your
