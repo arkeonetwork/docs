@@ -71,6 +71,11 @@ example
 curl -s seed.arkeo.network:26657/status | jq
 ```
 
+You can also find the genesis file here
+```
+curl -s http://seed.arkeo.network:26657/genesis | jq
+```
+
 ## 🎉 Let's Make Magic Happen!  By participating in the Arkeo Network Phase 3
 Testnet, you're not just testing a protocol—you're part of a passionate
 community that is shaping the future of blockchain technology. Your
