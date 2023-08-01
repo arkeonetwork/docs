@@ -59,14 +59,11 @@ seed.arkeo.network
 ```
 
 The arkeo api is available on port `1317`
-
-example
-``
+```
 curl seed.arkeo.network:1317/arkeo/providers | jq
 ```
 
 For the RPC port, try port `26657`
-example
 ```
 curl -s seed.arkeo.network:26657/status | jq
 ```
