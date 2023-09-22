@@ -19,6 +19,8 @@ unbond).
 
 To do this via the `cli`,
 ```bash
+RAWPUBKEY=$(arkeod keys show <name> -p | jq -r .key)
+PUBKEY=$(arkeod debug pubkey-raw $RAWPUBKEY)
 arkeod tx arkeo bond-provider -y --from "$USER" --keyring-backend file -- "$PUBKEY" "$SERVICE" "$BOND"
 ```
 
