@@ -14,14 +14,18 @@ Provider    []byte
 Service     enum
 Bond        string
 ```
+
 The bond amount can be positive or negative (positive to bond, negative to
 unbond).
 
 To do this via the `cli`,
 ```bash
-RAWPUBKEY=$(arkeod keys show <name> -p | jq -r .key)
-PUBKEY=$(arkeod debug pubkey-raw $RAWPUBKEY)
-arkeod tx arkeo bond-provider -y --from "$USER" --keyring-backend file -- "$PUBKEY" "$SERVICE" "$BOND"
+USER=wallet
+SERVICE=eth-mainnet-fullnode
+BOND=1000000
+RAWPUBKEY=$(arkeod keys show "$USER" -p | jq -r .key)
+PUBKEY=$(arkeod debug pubkey-raw $RAWPUBKEY | grep 'Bech32 Acc:' | sed "s|Bech32 Acc: ||g")
+arkeod tx arkeo bond-provider -y --from "$USER" --fees 50uarkeo --keyring-backend file -- "$PUBKEY" "$SERVICE" "$BOND"
 ```
 
 You must do this per service you intend to run (ie Bitcoin, Ethereum, Gaia,
