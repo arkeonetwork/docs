@@ -38,7 +38,7 @@ configure additional information.
 | Attribute Name         | Attribute Type | Example                          | Notes                                                                                                   |
 | ---------------------- | -------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | Service                | string         | btc-mainnet-fullnode            |                                                                                                         |
-| MetadataUri            | string         | http://<my ip>:3636/metadata.json | This should be a fully qualified URI                                                                    |
+| MetadataUri            | string         | http://{SENTINEL_PUBLIC_IP_OR_DOMAIN}:3636/metadata.json | This should be a fully qualified URI                                                                    |
 | MetadataNonce          | uint64         | 45                               | This should increment each time you modify or change the contents of metadata.json within your sentinel |
 | Status                 | enum           | Online                           | This allows you to signal that you're in a maintenance window and no new contracts would be open during this time.          |
 | MinContractDuration    | int64          | 5                                | This sets a minimum contract duration                                                                  |
