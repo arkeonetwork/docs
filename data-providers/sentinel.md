@@ -61,6 +61,9 @@ query arg do your request as such
 /?arkauth=<contract_id>:<nonce>:<signature>
 ```
 
+If the contract is an open contract, no need to supply the nonce or the
+signature (as anyone is allow to query this paid contract)
+
 The `nonce` refers to counter that increments on each request to the data
 provider. If the client doesn't know the current `nonce`, query the `claim`
 (`/claim/<contract_id>`) which will include both the nonce and the signature
