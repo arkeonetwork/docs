@@ -79,6 +79,6 @@ To create the signature, use your private key to sign the following text
 ```
 
 The signature produce should be hex encoded into a string for transmission
-([sample](https://pkg.go.dev/encoding/hex#EncodeToString)]. There is a command
+([sample](https://pkg.go.dev/encoding/hex#EncodeToString)). There is a command
 line tool to creating this signature in the arkeo codebase, called
 [signhere](https://github.com/arkeonetwork/arkeo/tree/master/tools/signhere)
