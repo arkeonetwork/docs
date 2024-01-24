@@ -13,6 +13,7 @@
         * [Sentinel](data-providers/sentinel.md)
     * Contracts
         * [Management](contracts/management.md)
+        * [Query](contracts/query.md)
 * Airdrop
   * [Airdrop](airdrop.md)
 * Official URLs
