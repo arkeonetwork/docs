@@ -1,22 +1,41 @@
 # Arkeo Token
 
 ## Introduction
-The Arkeo Token (ARKEO) is the native currency of the Arkeo Network. It used to facilitate payments between clients and providers, for bonds posted by providers, and by validators for securing the network via proof-of-stake. Additionally, it confers voting rights for governance of the network.
 
-## Max Supply
-Total Supply: 121,000,000 ARKEO
+The **Arkeo Token (ARKEO)** is the native currency of the Arkeo Network. It serves several purposes:  
+- Facilitates payments between clients and providers.  
+- Acts as bonds posted by providers.  
+- Used by validators to secure the network via Proof-of-Stake.  
+- Grants voting rights for network governance.
+
+> **Conversion:**  
+> **1 ARKEO = 100,000,000 uARKEO**
+
+---
+
+## Maximum Supply
+
+- **Total Supply:** 121,000,000 ARKEO  
+
+---
 
 ## Airdrop
-See [Airdrop](../airdrop.md)
+
+For details on the airdrop, refer to the [Airdrop Documentation](../airdrop.md).
+
+---
 
 ## Reserve
-The reserve is a cosmos module that holds non-circulating supply of ARKEO. It
-is governed by chain rules rather than any DAO/voting. Token are emitted from
-here to validators and their delegates using the emission schedule.
 
-```
-e = 6 # emission curve
-y = 5256666 # blocks per year
-r = reserve depth
+The **Reserve** is a Cosmos module that holds the **non-circulating supply** of ARKEO. It is governed by chain rules rather than DAO or voting. Tokens are emitted from the reserve to validators and their delegates according to the **emission schedule**.
+
+### Emission Formula:
+```text
+e = 6         # Emission curve
+y = 5,256,666 # Blocks per year
+r = Reserve Depth
+
 block emission = r / e / y
 ```
+
+This formula determines the number of tokens emitted per block, based on the reserve depth (`r`) and the emission curve (`e`).

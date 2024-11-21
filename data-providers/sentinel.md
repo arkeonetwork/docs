@@ -23,7 +23,7 @@ $ curl -s http://<ip-address>:3636/metadata.json | jq
     "event_stream_host": "arkeo:26657",
     "claim_store_location": "${HOME}/.arkeo/claims",
     "provider_pubkey": "arkeopub1-----------------",
-    "free_tier_rate_limit": 10,
+    "free_tier_rate_limit": 10
   },
   "version": "0.1.0"
 }
