@@ -48,29 +48,29 @@ looking for please reach out in discord and let us know how we can help.
 ## 💰 Acquiring Testnet Tokens To jump into testing, you'll need testnet
 tokens. At present, we support a command-line tool, not wallets. Learn how to
 install this CLI tool and create a wallet on our [GitHub
-repository](https://github.com/arkeonetwork/arkeo#arkeo-binary). Once you've
-got your "tarkeo" address, request tokens through this [Google
-form](https://forms.gle/aM6sc73qtxenRxf37).
+repository](https://github.com/arkeonetwork/arkeo). Once you've
+got your "tarkeo" address, request tokens through this [Discord
+Channel](https://discord.gg/wBcdVM53).
 
 ## 💻 Testnet Address
 To access a testnet server, they can be reached at
 ```
-seed.arkeo.network
+seed31.innovationtheory.com
 ```
 
 The arkeo api is available on port `1317`
 ```
-curl seed.arkeo.network:1317/arkeo/providers | jq
+curl seed31.innovationtheory.com:1317/arkeo/providers | jq
 ```
 
 For the RPC port, try port `26657`
 ```
-curl -s seed.arkeo.network:26657/status | jq
+curl -s seed31.innovationtheory.com:26657/status | jq
 ```
 
 You can also find the genesis file here
 ```
-curl -s http://seed.arkeo.network:26657/genesis | jq
+curl -s http://seed31.innovationtheory.com:26657/genesis | jq
 ```
 
 ## 🎉 Let's Make Magic Happen!  By participating in the Arkeo Network Phase 3
