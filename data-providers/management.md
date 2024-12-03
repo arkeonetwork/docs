@@ -35,17 +35,17 @@ etc).
 Once you have registered your data provider and services, you'll want to
 configure additional information.
 
-| Attribute Name         | Attribute Type | Example                          | Notes                                                                                                   |
-| ---------------------- | -------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Service                | string         | btc-mainnet-fullnode            |                                                                                                         |
-| MetadataUri            | string         | http://{SENTINEL_PUBLIC_IP_OR_DOMAIN}:3636/metadata.json | This should be a fully qualified URI                                                                    |
-| MetadataNonce          | uint64         | 45                               | This should increment each time you modify or change the contents of metadata.json within your sentinel |
-| Status                 | enum           | Online                           | This allows you to signal that you're in a maintenance window and no new contracts would be open during this time.          |
-| MinContractDuration    | int64          | 5                                | This sets a minimum contract duration                                                                  |
-| MaxContractDuration    | int64          | 432000                           | This sets a maximum contract duration. This ensures that contracts aren't open for too long, making it hard to adjust pricing. |
-| SubscriptionRate       | []types.Coin   | "40uarkeo,..."                     | This allows you to set your prices for subscription contracts. You can specify any IBC-enabled assets like ATOM or ARKEO or USDC. |
-| PayAsYouGo             | []types.Coin   | "90uarkeo,..."                     | Same as above but for pay-as-you-go contracts.                                                         |
-| SettlemenDuration      | int64          | 1000                             | This gives the data provider additional time after a contract has expired to make any last-minute claims for rewards (for pay-as-you-go contracts). |
+| **Attribute Name**      | **Attribute Type** | **Example**                              | **Notes**                                                                                                                                      |
+|--------------------------|--------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Service**             | `string`          | `btc-mainnet-fullnode`                  | The name of the service being provided.                                                                                                      |
+| **MetadataUri**         | `string`          | `http://{SENTINEL_PUBLIC_IP_OR_DOMAIN}:3636/metadata.json` | Must be a fully qualified URI pointing to the metadata file.                                                                                   |
+| **MetadataNonce**       | `uint64`          | `45`                                    | Increments with each modification to `metadata.json`.                                                                                         |
+| **Status**              | `enum`            | `Online`                                | Signals service status. For example, during maintenance, no new contracts can be opened.                                                     |
+| **MinContractDuration** | `int64`           | `5`                                     | Specifies the minimum duration of contracts in seconds.                                                                                       |
+| **MaxContractDuration** | `int64`           | `432000`                                | Specifies the maximum duration of contracts in seconds. Prevents long contracts that hinder pricing adjustments.                              |
+| **SubscriptionRate**    | `[]types.Coin`    | `"40uarkeo,..."`                        | Defines the price for subscription contracts. Accepts IBC-enabled assets like ARKEO, ATOM, or USDC.                                           |
+| **PayAsYouGo**          | `[]types.Coin`    | `"90uarkeo,..."`                        | Defines the price for pay-as-you-go contracts. Same format as `SubscriptionRate`.                                                             |
+| **SettlemenDuration**   | `int64`           | `1000`                                  | The time (in seconds) allowed for the provider to make claims after a contract expires (relevant for pay-as-you-go contracts).                |
 
 
 To do this via the `cli`,

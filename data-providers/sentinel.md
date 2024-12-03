@@ -1,9 +1,47 @@
-Sentinel
-========
+# Sentinel
 Sentinel is a custom built reverse proxy (similar to nginx). Its role is be
 the front facing services that proxies requests to backend services (ie
 an RPC). It is also in charge of authentication/authorization as well as rate
 limiting services.
+
+## 🚀 Starting the Sentinel Service
+
+### 🛠️ Build the Sentinel Binary
+
+Compile the Sentinel binary by running:
+
+```bash
+make install
+```
+
+### ⚙️ Set Environment Variables
+
+Configure the environment variables as follows:
+
+```bash
+MONIKER="<your-moniker>" \
+WEBSITE="<website-address>" \
+DESCRIPTION="<provider description>" \
+LOCATION="<location>" \
+PORT="<sentinel-port>" \
+SOURCE_CHAIN="<arkeo chain address>" \
+EVENT_STREAM_HOST="<arkeo event stream host (rpc address)>" \
+FREE_RATE_LIMIT=<free tier rate limit> \
+FREE_RATE_LIMIT_DURATION="<duration>" \
+CLAIM_STORE_LOCATION="~/.arkeo/claims" \
+CONTRACT_CONFIG_STORE_LOCATION="~/.arkeo/contract_configs" \
+PROVIDER_PUBKEY="<Provider PubKey>" \
+PROVIDER_CONFIG_STORE_LOCATION="~/.arkeo/provider"
+```
+
+### ▶️ Run Sentinel
+
+Start the Sentinel service by executing:
+
+```bash
+sentinel
+```
+
 
 ## API Documentation
 ### Metadata
@@ -23,7 +61,7 @@ $ curl -s http://<ip-address>:3636/metadata.json | jq
     "event_stream_host": "arkeo:26657",
     "claim_store_location": "${HOME}/.arkeo/claims",
     "provider_pubkey": "arkeopub1-----------------",
-    "free_tier_rate_limit": 10,
+    "free_tier_rate_limit": 10
   },
   "version": "0.1.0"
 }

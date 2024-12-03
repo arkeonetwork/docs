@@ -1,12 +1,13 @@
 # Setting Up a Validator for Arkeo
 
-This document will guide you through the process of setting up a validator for Arkeo. Validators are responsible for validating and committing blocks in a Proof-of-Stake (PoS) blockchain network.
+This document provides a step-by-step guide to setting up a validator for the Arkeo blockchain. Validators play a crucial role in Proof-of-Stake (PoS) networks by validating and committing blocks. This process involves running nodes and staking Arkeo tokens to actively participate in the network's consensus mechanism.
+
 
 ## Prerequisites
 
 Before you start setting up a validator, make sure you have the following software installed:
 
-- Go 1.20 or higher
+- Go 1.21 or higher
 
 Also, ensure that you have sufficient tokens to stake as a validator.
 
@@ -14,36 +15,76 @@ Also, ensure that you have sufficient tokens to stake as a validator.
 
 ### 1. Install and build the project
 
-Clone the arkeo repository and build the CLI and daemon binaries:
+Option 1: Build from Source
 
 ```bash
 git clone https://github.com/arkeonetwork/arkeo.git
 cd arkeo
 make install
+```
+Option 2: Use Prebuilt Release Binaries
+```bash
+VERSION=$(curl -s https://api.github.com/repos/arkeonetwork/arkeo/releases/latest | grep tag_name | cut -d '"' -f 4)
+BINARY_URL="https://github.com/arkeonetwork/arkeo/releases/download/$VERSION/<binary-name>.tar.gz"
+curl -L $BINARY_URL -o arkeod.tar.gz
+mkdir -p $HOME/go/bin
+tar -xzf arkeod.tar.gz -C $HOME/go/bin
+chmod +x $HOME/go/bin/arkeod
+rm arkeod.tar.gz
+```
 
-### 2. Initialize the node
 
-Initialize your node using the `arkeod init` command. Replace `<your_moniker>` with a name for your node.
+### 2. Generate a new key pair for the validator and configure node binary
+
+Generate a new key pair for your validator using the following command:
 
 ```bash
-arkeod init <your_moniker> --chain-id <your_chain_id>
+arkeod keys add <your_validator_key_name> 
 ```
+
+**Important: Make sure to securely store the mnemonic phrase, as it is required for key recovery.**
 
 You can get the `chain_id` from any currently available validators
 ```bash
 curl -sL <ip address>:<port>/status | jq .result.node_info.network
 ```
 
-### 3. Generate a new key pair for the validator
-
-Generate a new key pair for your validator using the following command:
-
+Configure node binary using below commands:
 ```bash
-arkeod keys add <your_validator_key_name>
+arkeod config set client chain-id <your_chain_id>
+arkeod config set client keyring-backend <keyring>
 ```
 
-**Important: Make sure to securely store the mnemonic phrase, as it is required for key recovery.**
+Download genesis file 
+```bash
+curl -s <ip address>:<port>/genesis | jq '.result.genesis' > $HOME/.arkeo/config/genesis.json
+```
 
+
+Configure App Setting: Pruning, Gas Prices, Swagger and Prometheus
+```bash
+sed -i -e "s/^pruning *=.*/pruning = \"custom\"/" $HOME/.arkeo/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"100\"/" $HOME/.arkeo/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"50\"/" $HOME/.arkeo/config/app.toml
+sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "<minimum-price>uarkeo"|g' $HOME/.arkeo/config/app.toml
+sed -i 's|swagger =.*| swagger = true|g' $HOME/.arkeo/config/app.toml
+```
+
+Configure Seeds and Peers: Set Seeds and Peers
+```bash
+SEEDS="<seed goes here>"
+PEERS="peers comma separated"
+sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
+  -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.arkeo/config/config.toml
+```
+
+### 3. Initialize the node
+
+Initialize your node using the `arkeod init` command. Replace `<your_moniker>` with a name for your node.
+
+```bash
+arkeod init <your_moniker> --chain-id <your_chain_id>
+```
 
 ### 4. Create the validator
 
