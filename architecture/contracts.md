@@ -35,8 +35,7 @@ Arkeo supports two types of contracts: **Subscription** and **Pay-as-You-Go**.
     - After contract expiration, providers can make final claims within a settlement period (agreed upon during the `OpenContract` call).  
     - Once the settlement period ends, unused funds are returned to the client.  
   - **Cancellation Rules:**  
-    - Clients cannot cancel pay-as-you-go contracts and must wait for expiration.  
-    - Providers can cancel these contracts at any time.  
+    - Clients can cancel pay-as-you-go contracts
 
 ---
 
