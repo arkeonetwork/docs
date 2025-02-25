@@ -32,7 +32,7 @@ The **Reserve** is a Cosmos module that holds the **non-circulating supply** of 
 ### Emission Formula:
 ```text
 e = 6         # Emission curve
-y = 5,256,666 # Blocks per year
+y = 6,311,520 # Blocks per year
 r = Reserve Depth
 
 block emission = r / e / y
