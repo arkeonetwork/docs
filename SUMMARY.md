@@ -14,7 +14,7 @@
     * [Getting Paid](providers/getting-paid.md)
     * [Ongoing Management](providers/management.md)
 * Arkeo for Data-Subscribers
-    * [Connecting to Data-Providers](subscribers/setup.md)
+    * [Subscribers Setup](subscribers/setup.md)
     * [Subscription Contract Setup](subscribers/setup-subscription.md)
     * [Pay-As-You-Go Contract Setup](subscribers/setup-payg.md)
     * [Managing Contracts](subscribers/contract-management.md)
