@@ -1,21 +1,33 @@
-# Table of contents
+# Table of Contents
 
 * [Introduction](README.md)
-* [Public Testnet](testnet.md)
+* How To Use Arkeo
+    * [Start Here](howto/start-here.md)
+    * [How Does This All Work](howto/overview.md)
+    * [Contracts Explained](howto/contracts.md)
+    * [Trustless Settlement](howto/settlement-explained.md)
+    * [Key Security](howto/security.md)
+* Arkeo for Validators
+    * [Arkeo for Validators](validators/validators.md)
+* Arkeo for Data-Providers
+    * [Setting Up a Provider](providers/setup.md)
+    * [Getting Paid](providers/getting-paid.md)
+    * [Ongoing Management](providers/management.md)
+* Arkeo for Data-Subscribers
+    * [Connecting to Data-Providers](subscribers/setup.md)
+    * [Subscription Contract Setup](subscribers/setup-subscription.md)
+    * [Pay-As-You-Go Contract Setup](subscribers/setup-payg.md)
+    * [Managing Contracts](subscribers/contract-management.md)
+    * [Monitoring and 100% Uptime](subscribers/monitoring.md)
 * Architecture
-  * [Arkeo Token](architecture/token.md)
-  * [Data Providers](architecture/providers.md)  
-  * [Contracts and Lifecycle](architecture/contracts.md)
-  * [Directory Service](directory/directory.md)
-* How to use
-    * Data Providers
-        * [Management](data-providers/management.md)
-        * [Sentinel](data-providers/sentinel.md)
-    * Contracts
-        * [Management](contracts/management.md)
-        * [Query](contracts/query.md)
-* Airdrop
-  * [Airdrop](airdrop.md)
-* Official URLs
-  * [website](http://arkeo.network/)
+    * [The Arkeo Token](architecture/token.md)
+    * [Airdrop](architecture/airdrop.md)
+    * [Testnet](architecture/testnet.md)
+    * [Directory](architecture/directory.md)
 * FAQs
+    * [Frequently Asked Questions](faqs/faqs.md)
+* Official URLs
+  * [Arkeo Website](http://arkeo.network/)
+  * [Arkeo X/Twitter](https://twitter.com/arkeonetwork)
+  * [Arkeo Discord](https://discord.gg/BfEHpm6uFc)
+  * [Arkeo Github](https://github.com/arkeonetwork)

@@ -1,31 +1,26 @@
 # Arkeo Network Documentation
-Arkeo is a free-market decentralized network for providing access to
-blockchain data. Its intended goal is to create a decentralized option for
-interacting with any blockchain (although not limited to) and its data. It is somewhat analogous to
-[Infura](https://infura.io/) and [Alchemy](https://www.alchemy.com/), which
-today are the predominate providers in the industry for blockchain data. Both
-of these providers are highly centralized which creates a problem for web3 to
-be self-reliant and not require web2 to function. In addition these provider
-can censor users access to specific services while also do not have to respect
-privacy.
+
+Arkeo is a decentralized, free-market network providing reliable and censorship-resistant access to blockchain data. Unlike traditional centralized data providers (e.g., Infura and Alchemy), Arkeo empowers users and data providers with trustless interactions, transparent pricing, and community-driven quality assurance. Arkeo aims to create a truly decentralized alternative for accessing blockchain data, enhancing web3 self-reliance and privacy.
 
 ## The Arkeo Solution
-The Arkeo solution, at a high level, entails three points points.
- 1) **Free market data providers** - anyone can be a data provider and provide
-data for any blockchain. Each data provider can choose their own pricing,
-which allows the free market to discover the price of blockchain data.
- 1) **Trustless payment solution** - a user can pay a data provider in any
-IBC-enabled asset (will expand to other asset later). This includes the
-ability to make micro-payments allowing more flexibility for users.
- 1) **On-chain reputation** - since all relationships between users and data
-providers are public, it is easy to see the reputation of any data provider.
-This helps inform the community about which data providers are high quality vs
-low quality
 
-## How It Works
-Arkeo can be explained in how it in works in five simple bullet points.
- * Individuals can run full nodes of any blockchain and allow people to query their node(s) at a price of their choosing. These are called data providers.
- * Users can open a contract on-chain with specific data providers and escrow tokens. Contracts can be either subscription based or pay-as-you-go, with more options coming.
- * Each query between user and data provider is cryptographically provable and redeemable on-chain as income for data providers.
- * 10% of data provider income is paid to the network reserve, which is used to emit tokens to validators as block rewards.
- * Data provider reputation can be established by on-chain contract data such as provider age, user retention rates, income, etc. From this, one can abstract data provider quality.
+Arkeo's solution centers on three core concepts:
+
+- Free-Market Data Providers: Anyone can operate as a data provider, offering blockchain data at prices determined by market competition, allowing for efficient price discovery.
+- Trustless Payments: Users can securely pay providers using any IBC-enabled asset, with flexible micro-payments and options for subscription or usage-based contracts.
+- Transparent On-Chain Reputation: Provider performance and reliability are publicly verifiable through on-chain data, facilitating informed choices based on provider reputation and quality.
+
+## How Arkeo Works
+
+Here's a concise breakdown of how Arkeo functions:
+
+- Individuals operate full blockchain nodes and become data providers, setting their own pricing for data queries.
+- Users establish contracts directly with data providers, depositing tokens on-chain. Contracts support both subscription and pay-as-you-go models.
+- Each query is cryptographically verifiable and redeemable on-chain, ensuring trustless and transparent income for data providers.
+- A portion (10%) of provider earnings contributes to the network reserve, which funds validator incentives through block rewards.
+- Providers build transparent reputations through public on-chain metrics, including service quality, user retention, income stability, and provider longevity.
+
+Arkeo ensures decentralized and dependable blockchain data access, positioning itself as the robust web3 alternative to centralized infrastructure providers.
+
+Jump into [Start Here](howto/start-here.md) to get a better understanding how Arkeo works and how you can be part of it.
+
