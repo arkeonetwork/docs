@@ -360,7 +360,7 @@ Notes:
 - Check logs and outputs regularly to monitor successful execution and identify potential issues early.
 - Maintain accurate and up-to-date configurations to reflect your service usage and provider agreements.
 
-## PAYG Contract Test Script
+## Contract Management: PAYG Auto-Fetch Test Script
 
 This script identifies the currently active Pay-As-You-Go (PAYG) contract and performs a signed test call to verify connectivity and authorization. It retrieves the latest active contract, computes the next available nonce for claim tracking, generates a cryptographic signature, and makes an authenticated request to the provider's API. This ensures the PAYG contract is functional and ready for use, validating proper setup and ongoing access.
 

@@ -18,7 +18,7 @@
     * [Subscription Contract Setup](subscribers/setup-subscription.md)
     * [Pay-As-You-Go Contract Setup](subscribers/setup-payg.md)
     * [Managing Contracts](subscribers/contract-management.md)
-    * [Monitoring and 100% Uptime](subscribers/monitoring.md)
+    * [Monitoring](subscribers/monitoring.md)
 * Architecture
     * [The Arkeo Token](architecture/token.md)
     * [Airdrop](architecture/airdrop.md)
