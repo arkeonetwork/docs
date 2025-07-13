@@ -4,6 +4,7 @@
 * How To Use Arkeo
     * [Start Here](howto/start-here.md)
     * [How Does This All Work](howto/overview.md)
+    * [What Data Does Arkeo Support?](howto/supported.md)
     * [Contracts Explained](howto/contracts.md)
     * [Trustless Settlement](howto/settlement-explained.md)
     * [Key Security](howto/security.md)
