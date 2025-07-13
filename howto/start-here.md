@@ -43,6 +43,7 @@ Arkeo combines **off-chain authorization** (fast, flexible agreements) with **on
 Understanding the "Arkeo way" is essential, as this innovation genuinely matters. Explore in-depth details here:
 
 - [The Arkeo Process](overview.md)
+- [What Data Does Arkeo Support?](supported.md)
 - [Contracts Explained](contracts.md)
 - [Settlement and Getting Paid](settlement-explained.md)
 - [Key Security and Usage](security.md)
