@@ -15,5 +15,5 @@ http://localhost:1317/arkeo/services
 
 Need us to support some data, or a different type of data?  Just let us know.
 
-Join our community on Discord:
-https://discord.com/channels/1050100146626642052/1359893459854688439
+Join our Data-Providers channel on Discord:
+[Arkeo Discord, Data-Providers](https://discord.com/channels/1050100146626642052/1359893459854688439)

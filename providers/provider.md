@@ -72,4 +72,5 @@ Ready to become an Arkeo Data Provider? Great!
 
 Your next step is setting up your infrastructure and joining the Arkeo Open Data Marketplace.
 
-[Go to the Provider setup.](setup.md)
+Join our Data-Providers channel on Discord:
+[Arkeo Discord, Data-Providers](https://discord.com/channels/1050100146626642052/1359893459854688439)
