@@ -8,12 +8,13 @@ You already know what Arkeo is about, now let's dive deeper. Whether you're here
 
 ### Find your starting point below:
 
-| I want to…                                           |                                                     |
-|------------------------------------------------------|-----------------------------------------------------|
-| Earn by sharing data, APIs, or services              | [Become a Provider](../providers/start-here.md)     |
-| Access on-demand data, bandwidth, or APIs            | [Become a Subscriber](../subscribers/start-here.md) |
-| Secure the Arkeo network and earn rewards            | [Become a Validator](../validators/start-here.md)   |
-| Build apps or integrate Arkeo into my projects       | [Build on Arkeo](../build/builders.md)              |
+| I want to…                                     |                                                   |
+|------------------------------------------------|---------------------------------------------------|
+| Earn by sharing data, APIs, or services        | [Become a Provider](../providers/provider.md)     |
+| Access on-demand data, bandwidth, or APIs      | [Become a Subscriber](../subscribers/setup.md)    |
+| Secure the Arkeo network and earn rewards      | [Become a Validator](../validators/validators.md) |
+| Index and server the Indexer API               | [Become an Indexer](../indexers/indexers.md)      |
+| Build apps or integrate Arkeo into my projects | [Build on Arkeo](../build/builders.md)            |
 
 ---
 

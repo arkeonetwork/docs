@@ -41,25 +41,45 @@ arkeod keys add <provider-hot-wallet> --keyring-backend test
 > - The test backend stores your keys unencrypted; use it only for automated scripts.
 > - Never use this wallet for significant funds.
 
+## Update your *.toml files in your home directory
+
+Important fields to update- as these affect the command line calls.
+- chain-id = "arkeo-main-v1"
+- keyring-backend = "test"
+- broadcast-mode = "sync"
+
 ## Bond Your Provider Service On-Chain
 Bonding stakes collateral and registers your service:
 
 ```
+#!/bin/bash
+
 USER="<provider-hot-wallet>"
-SERVICE="<your-service-name>" 
-BOND=100000000 
+SERVICE="<your-service-name>"
+BOND=100000000
 KEYRING_BACKEND="test"
 FEES="200uarkeo"
 
+# Get raw public key
 RAWPUBKEY=$(arkeod keys show "$USER" -p --keyring-backend="$KEYRING_BACKEND" | jq -r .key)
+
+# Convert to Bech32 pubkey
 PUBKEY=$(arkeod debug pubkey-raw $RAWPUBKEY | grep 'Bech32 Acc:' | sed "s|Bech32 Acc: ||g")
 
+echo "Using USER: $USER"
+echo "RAW PUBKEY: $RAWPUBKEY"
+echo "PUBKEY: $PUBKEY"
+echo "SERVICE: $SERVICE"
+echo "KEYRING_BACKEND: $KEYRING_BACKEND"
+echo "FEES: $FEES"
+
+# Bond the provider
 arkeod tx arkeo bond-provider "$PUBKEY" "$SERVICE" "$BOND" \
---from="$USER" \
---fees="$FEES" \
---keyring-backend="$KEYRING_BACKEND" \
--b sync \
--y
+  --from="$USER" \
+  --fees="$FEES" \
+  --keyring-backend="$KEYRING_BACKEND" \
+  -b sync \
+  -y
 ```
 
 > Notice:
@@ -68,7 +88,16 @@ arkeod tx arkeo bond-provider "$PUBKEY" "$SERVICE" "$BOND" \
 ## Configure Provider Metadata
 Make your service discoverable and configure contract terms:
 
+**Important to note:**
+>METADATA_NONCE=1
+ 
+Be sure to increment this nonce every time you mod your provider info. It's easy to forget. 
+
 ```
+#!/bin/bash
+
+KEY="<provider-hot-wallet>"
+SERVICE="<your-service-name>"
 SENTINEL_URI="http://<your-domain-or-ip>:3636/metadata.json"
 METADATA_NONCE=1
 STATUS=1
@@ -77,13 +106,32 @@ MAX_CONTRACT_DUR=432000
 SUBSCRIPTION_RATES="200uarkeo"
 PAY_AS_YOU_GO_RATES="200uarkeo"
 SETTLEMENT_DUR=1000
+KEYRING_BACKEND="test"
+FEES="200uarkeo"
 
+# Get raw public key
+RAWPUBKEY=$(arkeod keys show "$KEY" -p --keyring-backend="$KEYRING_BACKEND" | jq -r .key)
+
+# Convert to Bech32 pubkey
+PUBKEY=$(arkeod debug pubkey-raw $RAWPUBKEY | grep 'Bech32 Acc:' | sed "s|Bech32 Acc: ||g")
+
+# Mod the provider
 arkeod tx arkeo mod-provider \
-"$PUBKEY" "$SERVICE" "$SENTINEL_URI" "$METADATA_NONCE" "$STATUS" \
-"$MIN_CONTRACT_DUR" "$MAX_CONTRACT_DUR" "$SUBSCRIPTION_RATES" \
-"$PAY_AS_YOU_GO_RATES" "$SETTLEMENT_DUR" \
---from="$USER" --fees="$FEES" \
---keyring-backend="$KEYRING_BACKEND" -y
+"$PUBKEY" \
+"$SERVICE" \
+"$SENTINEL_URI" \
+"$METADATA_NONCE" \
+"$STATUS" \
+"$MIN_CONTRACT_DUR" \
+"$MAX_CONTRACT_DUR" \
+"$SUBSCRIPTION_RATES" \
+"$PAY_AS_YOU_GO_RATES" \
+"$SETTLEMENT_DUR" \
+--from="$KEY" \
+--fees="$FEES" \
+--keyring-backend="$KEYRING_BACKEND" \
+-y
+
 ```
 
 ## Provider and Sentinel Configuration

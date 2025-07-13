@@ -10,6 +10,7 @@
 * Arkeo for Validators
     * [Arkeo for Validators](validators/validators.md)
 * Arkeo for Data-Providers
+    * [provider.md](providers/provider.md)
     * [Setting Up a Provider](providers/setup.md)
     * [Getting Paid](providers/getting-paid.md)
     * [Ongoing Management](providers/management.md)
@@ -19,6 +20,8 @@
     * [Pay-As-You-Go Contract Setup](subscribers/setup-payg.md)
     * [Managing Contracts](subscribers/contract-management.md)
     * [Monitoring](subscribers/monitoring.md)
+* Arkeo for Indexers
+  * [Arkeo for Indexers](indexers/indexers.md)
 * Architecture
     * [The Arkeo Token](architecture/token.md)
     * [Airdrop](architecture/airdrop.md)
