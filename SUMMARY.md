@@ -11,7 +11,7 @@
 * Arkeo for Validators
     * [Arkeo for Validators](validators/validators.md)
 * Arkeo for Data-Providers
-    * [provider.md](providers/provider.md)
+    * [Providers Intro](providers/provider.md)
     * [Setting Up a Provider](providers/setup.md)
     * [Getting Paid](providers/getting-paid.md)
     * [Ongoing Management](providers/management.md)
