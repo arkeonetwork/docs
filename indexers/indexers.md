@@ -172,7 +172,7 @@ Now run your Indexer.
 ```
 cd ~/go/bin  
 
-./indexer --config /Users/user/Projects/arkeo_providers/indexer_config_1.yaml
+./indexer --config /Users/user/arkeo_providers/indexer_config_1.yaml
 ```
 And as that works, you will see blocks flying by and data in the Postgres sql.  If it looks good, then launch the background service.
 
@@ -219,7 +219,7 @@ db:
 ```
 cd ~/go/bin  
 
-./api --config /Users/phil/Projects/arkeo_providers/api_config_1.yaml
+./api --config /Users/user/arkeo_providers/api_config_1.yaml
 ```
 
 ### API Calls
@@ -235,6 +235,10 @@ http://127.0.0.1:7777/health
 ```
 http://127.0.0.1:7777/stats
 http://127.0.0.1:7777/stats/arkeo-mainnet-fullnode
+```
+#### Provider Search
+```
+http://127.0.0.1:7777/provider/search?service=arkeo-mainnet-fullnode&sort=contract_count
 ```
 
 #### Provider
