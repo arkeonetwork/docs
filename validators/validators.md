@@ -20,9 +20,62 @@ cd arkeo
 make install
 ```
 
-### Create or Import Validator Key
+### Install Cosmovisor
 
+**Build Cosmovisor**
+```bash
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
+```
+
+**Place Cosmovisor in /usr/local/bin**
+```
+sudo cp $(which cosmovisor) /usr/local/bin/
+```
+
+### Create or Import Validator Key
+```
 arkeod keys add <validator-key-name> --keyring-backend file
+```
+
+### Prepare Cosmovisor Directory Structure
+Assuming your Arkeo home is ~/.arkeo (default):
+
+```
+mkdir -p ~/.arkeo/cosmovisor/genesis/bin
+mkdir -p ~/.arkeo/cosmovisor/upgrades
+```
+
+Copy the current arkeod binary to the genesis bin:
+```
+cp ~/go/bin/arkeod ~/cosmovisor/genesis/bin/
+```
+
+
+### Update Service to Use Cosmovisor
+Create a systemd service for Cosmovisor:
+
+```
+# /etc/systemd/system/arkeod.service
+
+[Unit]
+Description=Arkeo Node (Cosmovisor)
+After=network-online.target
+
+[Service]
+User=<ARKEO_USER>
+ExecStart=/usr/local/bin/cosmovisor run start
+Restart=always
+RestartSec=10
+LimitNOFILE=4096
+Environment="DAEMON_NAME=arkeod"
+Environment="DAEMON_HOME=/home/<ARKEO_USER>/.arkeo"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+
+[Install]
+WantedBy=multi-user.target
+```
+
 
 ### Fund Validator Account
 
@@ -64,6 +117,16 @@ arkeod tx staking delegate <validator-address> 500000uarkeo --from <validator-ke
 ```
 arkeod tx distribution withdraw-rewards <validator-address> --from <validator-key-name> --fees 200uarkeo -y
 ```
+
+## Cosmovisor Upgrade Flow
+For chain upgrades, place the new arkeod binary under:
+
+```
+~/.arkeo/cosmovisor/upgrades/<UpgradeName>/bin/arkeod
+```
+Cosmovisor will auto-switch at the block height specified by the chain upgrade proposal.
+
+
 
 ## Best Practices
 
