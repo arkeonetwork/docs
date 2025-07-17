@@ -32,6 +32,20 @@ Before choosing a provider, carefully check:
 - Contract terms such as rate, minimum duration, and settlement details.
 - Provider reputation and reliability based on community feedback.
 
+## Create a Hot Wallet (Automated Key)
+
+Providers automate claim settlements using a dedicated "hot wallet":
+
+```
+arkeod keys add <provider-hot-wallet> --keyring-backend test
+```
+
+- Fund this wallet only with minimal amounts required for bonding and fees.
+
+> Security Notice:
+> - The test backend stores your keys unencrypted; use it only for automated scripts.
+> - Never use this wallet for significant funds.
+
 ## Arkeo Supported Services
 
 Use either of these services for a comprehensive reference mapping between service names and their numeric identifiers, as used within Arkeo.
