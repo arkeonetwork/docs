@@ -32,62 +32,16 @@ Before choosing a provider, carefully check:
 - Contract terms such as rate, minimum duration, and settlement details.
 - Provider reputation and reliability based on community feedback.
 
-## Arkeo Service Enum Mapping
+## Arkeo Supported Services
 
-Below is a comprehensive reference mapping between service names and their numeric identifiers, as used within Arkeo:
+Use either of these services for a comprehensive reference mapping between service names and their numeric identifiers, as used within Arkeo.
 
-| Service Name                     | Service Number |
-|----------------------------------|----------------|
-| unknown                          | 0              |
-| mock                             | 1              |
-| arkeo-mainnet-fullnode           | 2              |
-| avax-mainnet-fullnode            | 3              |
-| avax-mainnet-archivenode         | 4              |
-| bch-mainnet-fullnode             | 5              |
-| bch-mainnet-lightnode            | 6              |
-| bnb-mainnet-fullnode             | 7              |
-| bsc-mainnet-fullnode             | 8              |
-| bsc-mainnet-archivenode          | 9              |
-| btc-mainnet-fullnode             | 10             |
-| btc-mainnet-lightnode            | 11             |
-| cardano-mainnet-relaynode        | 12             |
-| gaia-mainnet-rpc                 | 13             |
-| doge-mainnet-fullnode            | 14             |
-| doge-mainnet-lightnode           | 15             |
-| etc-mainnet-archivenode          | 16             |
-| etc-mainnet-fullnode             | 17             |
-| etc-mainnet-lightnode            | 18             |
-| eth-mainnet-archivenode          | 19             |
-| eth-mainnet-fullnode             | 20             |
-| eth-mainnet-lightnode            | 21             |
-| ltc-mainnet-fullnode             | 22             |
-| ltc-mainnet-lightnode            | 23             |
-| optimism-mainnet-fullnode        | 24             |
-| osmosis-mainnet-fullnode         | 25             |
-| polkadot-mainnet-fullnode        | 26             |
-| polkadot-mainnet-lightnode       | 27             |
-| polkadot-mainnet-archivenode     | 28             |
-| polygon-mainnet-fullnode         | 29             |
-| polygon-mainnet-archivenode      | 30             |
-| sol-mainnet-fullnode             | 31             |
-| thorchain-mainnet-fullnode       | 32             |
-| bch-mainnet-unchained            | 33             |
-| btc-mainnet-unchained            | 34             |
-| bnb-mainnet-unchained            | 35             |
-| bsc-mainnet-unchained            | 36             |
-| gaia-mainnet-unchained           | 38             |
-| doge-mainnet-unchained           | 39             |
-| eth-mainnet-unchained            | 40             |
-| avax-mainnet-unchained           | 41             |
-| ltc-mainnet-unchained            | 42             |
-| osmosis-mainnet-unchained        | 43             |
-| thorchain-mainnet-unchained      | 44             |
-| optimism-mainnet-unchained       | 45             |
-| gaia-mainnet-grpc                | 46             |
-| btc-mainnet-blockbook            | 47             |
-| ltc-mainnet-blockbook            | 48             |
-| bch-mainnet-blockbook            | 49             |
-| doge-mainnet-blockbook           | 50             |
+```
+arkeod query arkeo all-services
+```
+```
+http://localhost:1317/arkeo/services
+```
 
 ## More Information:
 Once you’ve completed the initial subscriber setup, explore these additional documentation pages to fully prepare and manage your Arkeo contracts:

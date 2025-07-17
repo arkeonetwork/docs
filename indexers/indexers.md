@@ -78,8 +78,8 @@ Do these commands on the server hosting the Postgres server.
 > Note that if you DROP DATABASE arkeo below, you will lose all your existing arkeo index data- but you probably know that.
 
 ```
-psql -h 100.28.199.0 -U postgres -c "DROP DATABASE arkeo;"
-psql -h 100.28.199.0 -U postgres -c "CREATE DATABASE arkeo;"
+psql -h 127.0.0.1 -U postgres -c "DROP DATABASE arkeo;"
+psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE arkeo;"
 ```
 
 Update the tern config in the arkeo directory.
