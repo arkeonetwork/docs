@@ -6,6 +6,9 @@ This guide walks you through setting up your Arkeo Provider—from bonding your 
 
 ### What You Need
 
+- **Access to a synced Arkeo Node**
+  - Host your own. (Recommended)
+  - Connect with someone who has their ports open.
 - **Arkeo Accounts:**
   - **Hot Wallet** (automated settlement key created with keyring-backend test).
   - (Optional) Secure cold storage account for larger funds.
@@ -26,6 +29,35 @@ This installs the arkeod CLI and related tools.
 
 > **Best Practice:**  
 > Although no full chain sync is required for basic operations, running your own node is highly recommended. Doing so ensures full control over blockchain events critical for timely settlements, avoiding reliance on third-party RPC services.
+
+## Syncing or Accessing an Arkeo Node
+
+For basic testing and setup, I think it's fine to use my provider, as the ports are open.
+
+Some command line examples:
+```
+arkeod status --node tcp://provider1.innovationtheory.com:26657
+
+ARKEOD_NODE="tcp://provider1.innovationtheory.com:26657" arkeod query arkeo all-services
+```
+
+Or the api reference
+```
+http://provider1.innovationtheory.com:1317/arkeo/services
+```
+> **Best Practice:**  
+> If you want to do anything at a production level, you will want to have a synced arkeo Daemon running connected live to the Arkeo blockchain.
+
+Follow the setup instructions:
+- [Running a Node](https://github.com/arkeonetwork/arkeo?tab=readme-ov-file)
+- [Validator Instructions](../validators/validators.md)
+
+Then you can use the most recent snapshot as a shortcut to syncing.
+
+```
+wget http://seed.innovationtheory.com:8080/arkeo_snapshot.tar.gz
+```
+Either way, make sure you have access to a synced Arkeo node before moving forward.
 
 ## Create a Hot Wallet (Automated Key)
 
