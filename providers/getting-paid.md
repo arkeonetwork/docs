@@ -32,7 +32,7 @@ set -e
 PROVIDER_KEY="your-provider-key"
 KEYRING_BACKEND="test"
 PROVIDER_API="http://127.0.0.1:3636"
-CHAIN_ID="arkeo-main-v2"
+CHAIN_ID="arkeo-main-v1"
 FEES="200uarkeo"
 
 PROVIDER_ACCOUNT=$(arkeod keys show "$PROVIDER_KEY" --bech acc --keyring-backend "$KEYRING_BACKEND" --address)

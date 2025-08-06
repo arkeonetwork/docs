@@ -345,7 +345,7 @@ Environment="PORT=3636"
 Environment="PROVIDER_CONFIG_STORE_LOCATION=/home/<your-os-user>/.arkeo/provider_configs"
 Environment="PROVIDER_HUB_URI=http://127.0.0.1:1317"
 Environment="PROVIDER_PUBKEY=<your-bech32-pubkey>"
-Environment="SOURCE_CHAIN=arkeo-main-v2"
+Environment="SOURCE_CHAIN=arkeo-main-v1"
 Environment="WEBSITE=https://arkeo.network"
 
 [Install]

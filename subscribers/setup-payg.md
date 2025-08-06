@@ -181,7 +181,7 @@ This script simulates multiple authorized requests against a PAYG contract, maki
 
 # --- CONFIGURATION ---
 CONTRACT_ID=<your-contract-id>
-CHAIN_ID="arkeo-main-v2"
+CHAIN_ID="arkeo-main-v1"
 CLIENT_KEY="<your-client-key-name>"
 KEYRING_BACKEND="test"
 PROVIDER_API="http://127.0.0.1:3636"

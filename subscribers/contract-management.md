@@ -31,7 +31,7 @@ This auto-topper script ensures continuous uptime for your Pay-As-You-Go (PAYG) 
 # CONTRACT_DELEGATE:        (Optional) Bech32 pubkey of a delegate permitted to spend or claim from this contract.
 #
 
-CHAIN_ID="arkeo-main-v2"
+CHAIN_ID="arkeo-main-v1"
 CLIENT_KEY="Arkeo-Main-Validator-3"
 CLIENT_KEYRING="test"
 ARKEO_SERVICE_API="127.0.0.1:26657"
@@ -378,7 +378,7 @@ This script identifies the currently active Pay-As-You-Go (PAYG) contract and pe
 # PROVIDER_SENTINEL_API:    API endpoint for the provider's Sentinel proxy (where client requests are sent for metering/billing).
 # PROVIDER_CONTRACT_TYPE:   Type of contract: 0 = subscription (fixed time), 1 = pay-as-you-go (usage-based).
 
-CHAIN_ID="arkeo-main-v2"
+CHAIN_ID="arkeo-main-v1"
 
 CLIENT_KEY="Arkeo-Main-Validator-3"
 CLIENT_KEYRING="test"
@@ -443,7 +443,7 @@ fi
 NEXT_NONCE=$((HIGHEST_NONCE + 1))
 
 # SIGN THE MESSAGE (Essential for strict/PAYG Contracts)
-CHAIN_ID="arkeo-main-v2"
+CHAIN_ID="arkeo-main-v1"
 MSG="$CONTRACT_ID:$NEXT_NONCE:$CHAIN_ID"
 SIG=$(signhere -u "$CLIENT_KEY" -m "$MSG" | tail -n 1)
 
